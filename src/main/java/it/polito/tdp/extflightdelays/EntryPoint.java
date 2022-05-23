@@ -17,7 +17,9 @@ public class EntryPoint extends Application {
     	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Scene.fxml"));
     	Parent root = loader.load();
         Scene scene = new Scene(root);
-         
+        scene.getStylesheets().add("/styles/Styles.css");
+        scene.getRoot().setStyle("-fx-font-family: 'serif'");
+        
         Model model = new Model();
         FXMLController controller = loader.getController();
         controller.setModel(model);
